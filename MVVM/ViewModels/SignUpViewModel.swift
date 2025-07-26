@@ -20,6 +20,7 @@ class SignUpViewModel: ObservableObject {
     @Published var showNextPage = false
     @Published var confirmPassword = ""
     
+    
     func handlePasswordViewAlert() {
         if password == confirmPassword {
             showNextPage = false

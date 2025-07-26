@@ -8,9 +8,7 @@ import SwiftUI
 
 struct SignUpUsernameEmailView: View {
     
-    @StateObject var viewModel = SignUpUsernameEmailViewModel()
-    
-    
+    @StateObject var viewModel = SignUpViewModel()
     
     var body: some View {
         NavigationStack {
@@ -43,7 +41,7 @@ struct SignUpUsernameEmailView: View {
                 .padding(.top)
             }
             .navigationDestination(isPresented: $viewModel.showNextPage, destination: {
-                SignUpPasswordView(username: viewModel.username, email: viewModel.email)
+                SignUpPasswordView(viewModel: viewModel)
             })
             .padding()
         }
