@@ -58,6 +58,8 @@ struct SignUpPasswordView: View {
     }
 }
 
+
+
 #Preview {
     SignUpPasswordView(viewModel: SignUpViewModel())
 }
