@@ -28,6 +28,13 @@ class SignUpViewModel: ObservableObject {
     }
     
     func confirmSignup() {
+        guard !password.isEmpty && !confirmPassword.isEmpty else {
+            alertTitle = "Password Required"
+            alertMessage = "Please provide a Password"
+            showAlertInPasswordView = true
+            return
+        }
+        
         if password == confirmPassword {
             alertTitle = "Success!"
             alertMessage = "Please check your email for the activation link."
